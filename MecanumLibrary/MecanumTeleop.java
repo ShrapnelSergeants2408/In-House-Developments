@@ -52,13 +52,13 @@ public class MecanumTeleop extends LinearOpMode {
 
     while (opModeIsActive()){
       if(gamepad1.dpad_up){
-        robot.turnMecanum(gamepad1.left_stick_y, 1);
+        robot.turnMecanum(gamepad1.left_stick_y,  1);
       } else if(gamepad1.dpad_right){
-        robot.turnMecanum(gamepad1.left_stick_y, 4);
+        robot.turnMecanum(gamepad1.left_stick_y,  4);
       } else if(gamepad1.dpad_down){
-        robot.turnMecanum(gamepad1.left_stick_y, 3);
+        robot.turnMecanum(gamepad1.left_stick_y,  3);
       } else if(gamepad1.dpad_left){
-        robot.turnMecanum(gamepad1.left_stick_y, 2);
+        robot.turnMecanum(gamepad1.left_stick_y,  2);
       } else if(gamepad1.left_bumper){
         robot.spinMecanum(gamepad1.left_stick_y);
       } else if(gamepad1.right_bumper){
@@ -68,7 +68,8 @@ public class MecanumTeleop extends LinearOpMode {
       } else if(gamepad1.b){
         robot.diagonalMecanum(gamepad1.left_stick_y, "NWSE");
       } else {
-      robot.driveMecanum(gamepad1.left_stick_y);
+        robot.resetWheels();
+        robot.driveMecanum(gamepad1.left_stick_y);
       }
     }
   }
