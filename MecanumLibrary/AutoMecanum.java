@@ -48,6 +48,9 @@ public class AutoMecanum extends LinearOpMode {
   @Override
   public void runOpMode() {
     
+    robot.init();
+    waitForStart();
+    
   }
   
   
